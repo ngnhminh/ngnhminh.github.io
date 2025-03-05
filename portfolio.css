@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1a082e;
+    color: #E0B0FF;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(44, 16, 70, 0.9);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #E0B0FF;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    background: none; /* Xóa gradient */
+}
+
+.header-content h1 {
+    font-size: 2.8rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #6A3DA1;
+    border: 2px solid #E0B0FF;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #E0B0FF;
+    color: #4C2A85;
+    box-shadow: 0 0 15px #E0B0FF;
+}
+
+/* ABOUT */
+.about {
+    padding: 60px;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+/* PROJECTS */
+.projects {
+    padding: 60px;
+}
+
+.project {
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+}
+
+.project img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 16, 70, 0.8);
+    color: #E0B0FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 10px;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+/* KỸ NĂNG */
+.skills {
+    padding: 60px;
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.skill {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(224, 176, 255, 0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #E0B0FF;
+}
+
+
+.progress {
+    background: #4C2A85;
+    border-radius: 20px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #E0B0FF;
+    transition: width 1s ease-in-out;
+}
+
+.contact {
+    padding: 60px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+#contact-form button {
+    padding: 10px;
+    border: none;
+    background: #E0B0FF;
+    color: #4C2A85;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+#contact-form button:hover {
+    background: #6A3DA1;
+    color: #fff;
+}
+
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+#spaceCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* HỌC VẤN */
+.education {
+    padding: 60px;
+    text-align: center;
+}
+
+.education-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.edu-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(224, 176, 255, 0.2);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.edu-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #E0B0FF;
+}
+
+/* KINH NGHIỆM */
+.experience {
+    padding: 60px;
+    text-align: center;
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.timeline-dot {
+    width: 15px;
+    height: 15px;
+    background: #E0B0FF;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #E0B0FF;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(224, 176, 255, 0.2);
+}
+
+/* Animation cho các section khi cuộn */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hiệu ứng hover cho navbar */
+.navbar a {
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #E0B0FF;
+    bottom: -5px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Cây học vấn dạng card */
+.education {
+    padding: 60px;
+    text-align: center;
+}
+
+.edu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.edu-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(224, 176, 255, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.edu-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #E0B0FF;
+}
+
+/* Hiệu ứng hover cho card */
+.edu-card, .exp-dot {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.edu-card:hover, .exp-dot:hover {
+    transform: scale(1.1);
+}
+
+/* Nút quay lại đầu trang */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #E0B0FF;
+    color: #4C2A85;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s;
+}
+
+#backToTop:hover {
+    background: #6A3DA1;
+    color: white;
+}
